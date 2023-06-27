@@ -1,0 +1,35 @@
+.container{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+@media (max-width: 768px){
+    .container{
+        padding: 0;
+    }
+
+}
+button{
+    min-width: 200px;
+    min-height: 40px;
+    margin-bottom: 16px;
+}
+
+
+.route_settings{
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 16px;
+}
+@media (max-width: 768px){
+    button{
+        align-self: unset;
+    }
+    .route_settings{
+        flex-direction: column-reverse;
+        align-items: unset;
+        gap: 0;
+    }
+}

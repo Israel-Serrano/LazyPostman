@@ -1,0 +1,62 @@
+button{
+  border: solid 3px var(--color-white);
+  background-color: transparent;
+  color: var(--color-white)!important;
+  text-transform: uppercase;
+}
+.content{
+    min-height:calc(100vh - 64px);
+}
+@media(max-width:600px){
+    .content{
+        min-height:calc(100vh - 140px);
+    }
+}
+
+.container{
+    background-image: url("../../../../../assets/img/bg-public.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height:100%;
+    width: 100%;
+}
+
+.m-10{
+    margin-right: 10px;
+}
+.max-1400{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo{
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+.logo_title{
+    font-family: 'Georgia', Times, serif;
+    font-size: 36px;
+    color: var(--color-white);
+    margin-bottom: 5px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media (max-width: 600px){
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+}
+.h-100{
+    height: 100%;
+}

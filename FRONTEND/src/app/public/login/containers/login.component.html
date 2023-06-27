@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="fields-grid">
+      <div class="left-column">
+        <div class="eslogan">
+          <h1>¡Optimiza tu Reparto! <br> Llega <span class="color-accent">más</span> lejos,<br> Ahorra <span class="color-secondary">más</span> tiempo</h1>
+          <p>Genera rutas optimizadas que permitan a tus trabajadores llegar más lejos en menos tiempo, que te ahorren dinero y les haga ganar en felicidad.</p>
+        </div>
+      </div>
+      <div class="right-column">
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="formulario">
+            <div class="form-fields">
+                <h2 class="centrar">Inicio de sesión</h2>
+                <mat-form-field appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input matInput type="text" placeholder="Lazy Postman S.L" formControlName="user">
+                <mat-error
+                    *ngIf="!loginForm.controls['user'].valid && loginForm.controls['user'].touched">Debes
+                    rellenar este campo
+                </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password" placeholder="********" formControlName="password">
+                <mat-error
+                *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched">Debes
+                rellenar este campo
+            </mat-error>
+                </mat-form-field>
+                <button mat-raised-button class="w-100" type="submit" color="primary"
+                [disabled]="loginForm.invalid">Inicio</button>
+                <button mat-stroked-button color="primary" type="button" (click)="goToRecover()">¿Olvidaste tu contraseña?</button>
+                <button mat-stroked-button color="primary" type="button" (click)="goToRegister()">¿No tienes una cuenta? Créala aquí</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

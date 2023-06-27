@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="titleBox">
+        <h2>Gestión de Empleados</h2>
+        <button *ngIf="isAdmin" mat-raised-button color="primary" (click)="openForm()">Añadir Empleado</button>
+    </div>
+  <app-users-table></app-users-table>
+</div>
+
